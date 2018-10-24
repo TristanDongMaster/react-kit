@@ -1,0 +1,8 @@
+node-modules/**/*
+dev/**/*
+dist/**/*
+config/*
+config/**/*
+mockService/**/*
+tools/**/*
+tempSTATIC/**/*

@@ -1,0 +1,2 @@
+// 通用
+export const COMMON_GET_USER_INFO = 'COMMON_GET_USER_INFO';

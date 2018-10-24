@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="shortcut icon" type="image/png" href="/brandActivity-assets/img/favicon.ico">
+    <title>品牌活动-京东营销活动中心</title>
+    <style type="text/css">
+        .gl-mask {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+        
+        .gl-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -40px;
+            margin-top: -40px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .hide {
+            visibility: hidden;
+        }
+        
+        .gl-blank-wrap {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            bottom: 30px;
+            right: 30px;
+        }
+        
+        .gl-blank-row {
+            height: 30px;
+            width: 100%;
+            background: #eee;
+            margin-bottom: 20px;
+        }
+        
+        .gl-blank-row-30 {
+            width: 30%;
+        }
+        
+        .gl-blank-row-50 {
+            width: 50%;
+        }
+        
+        .gl-blank-row-75 {
+            width: 75%;
+        }
+        
+        .gl-blank-row-90 {
+            width: 90%;
+        }
+    </style>
+    <style type="text/css">
+        body {
+            background-color: #f8f8f8 !important;
+            min-height: 100%;
+            height: auto !important;
+            min-width: 1280px;
+            padding: 0;
+            margin: 0;
+            font-family: "Monospaced Number", "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+        
+        .layout-block {
+            min-width: 1280px;
+        }
+        
+        .layout-block a {
+            text-decoration: none !important;
+        }
+        
+        .layout-block .layout-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 50px;
+            line-height: 85px;
+            background: #fff;
+            box-shadow: -2px 4px 5px #ddd;
+            height: 85px;
+            font-size: 14px;
+            color: #343434;
+        }
+        
+        .layout-block .layout-header a:hover {
+            color: #208bff;
+        }
+        
+        .layout-block .layout-header .header-logo img {
+            width: 275px;
+            height: 85px;
+            vertical-align: top;
+        }
+        
+        .layout-block .layout-header .header-content {
+            flex: 1;
+            margin-left: 70px;
+        }
+        
+        .layout-block .layout-header .header-content a {
+            display: inline-block;
+            margin-right: 10px;
+            height: 85px;
+            padding: 0 20px;
+            color: #343434;
+        }
+        
+        .layout-block .layout-header .header-content a.active {
+            position: relative;
+            font-weight: 700;
+            color: #208bff;
+        }
+        
+        .layout-block .layout-header .header-content a.active:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #208bff;
+        }
+        
+        .layout-block .layout-header .header-content a:hover {
+            color: #208bff;
+        }
+        
+        .layout-block .layout-header .header-right {
+            font-size: 12px;
+            color: #343434;
+        }
+        
+        .layout-block .layout-header .header-right .header-name {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .layout-block .layout-header .header-right .header-name i {
+            border-radius: 50%;
+            border: 1px solid #343434;
+            padding-top: 1px;
+        }
+        
+        .layout-block .layout-header .header-right a {
+            color: #343434;
+        }
+        
+        .layout-block .layout-header .header-right a:hover {
+            color: #208bff;
+        }
+        
+        .layout-block .layout-content {
+            display: flex;
+            align-items: flex-start;
+            margin: 0 50px;
+        }
+        
+        .layout-block .layout-content .layout-navigation {
+            background-color: white;
+            display: inline-block;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+        
+        .layout-block .layout-content .layout-children {
+            background-color: white;
+            flex: 1;
+            min-height: 600px;
+            padding: 10px 10px 0px 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+        
+        .layout-block .layout-footer {
+            height: 100px;
+            text-align: center;
+        }
+        
+        .layout-block .layout-breadcrumb {
+            clear: both;
+            min-height: 12px;
+            margin: 0 50px;
+            padding: 5px 0;
+            font-weight: 400;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        .layout-block .layout-breadcrumb .breadcrumb-separator {
+            color: #d7dde4;
+            margin: 0 5px;
+        }
+        
+        .layout-block .layout-breadcrumb a {
+            color: rgba(0, 0, 0, 0.45);
+            transition: color .3s;
+        }
+        
+        .layout-block .layout-breadcrumb a:hover {
+            color: #5cadff;
+        }
+        
+        .layout-block .block-title {
+            font-size: 20px;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layout-block-fake">
+        <div class="layout-block">
+            <div class="layout-header">
+                <div class="header-logo"><img src="/brandActivity-assets/img/logo.jpg"></div>
+                <div class="header-content"><a href="http://mc.jd.com" class="">首页</a><a href="http://mc.jd.com/dist/pages/activeEnroll/list" class="">活动报名</a><a href="http://mc.jd.com/dist/pages/activeManage/list/" class="">活动管理</a><a href="javascript:void(0)" class="active">品牌活动</a>
+                    <a href="http://mc.jd.com/dist/pages/userSetting/topcontract/" class="">用户设置</a><a href="http://mc.jd.com/dist/pages/help/" class="">帮助与反馈</a></div>
+                <div class="header-right"><span class="header-name"></span><a class="header-out" href="javascript:void()">退出</a></div>
+            </div>
+            <div class="layout-breadcrumb"></div>
+            <div class="layout-content">
+                <div class="layout-children"></div>
+            </div>
+        </div>
+    </div>
+    <div class="gl-mask" id="globalLoading">
+        <img class="gl-loading" src="/brandActivity-assets/img/loading.gif" />
+    </div>
+    <div id="root" class="container">
+    </div>
+</body>
+
+</html>

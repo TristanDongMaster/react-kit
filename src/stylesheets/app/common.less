@@ -1,0 +1,41 @@
+html {
+  background-color: white !important;
+}
+
+a {
+    color: #39f;
+    background: 0 0;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+}
+
+.hide{
+  display: none !important;
+}
+
+.container-logo {
+  position: relative;
+  padding-bottom: 0.6rem;
+  &:after {
+    position: absolute;
+    content: url("@{baseurl}/logo.png?v=0727") !important;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, 0) scale(0.34);
+	}
+}
+
+
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: right;
+}
+.ant-form-item-label.ant-form-item-label label{
+     color: rgba(0, 0, 0, 0.65);
+}
