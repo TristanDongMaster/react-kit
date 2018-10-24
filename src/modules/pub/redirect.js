@@ -1,7 +1,7 @@
-// https://ssa.jd.com/sso/login?ReturnUrl=
+
 export default function(callbackUrl){
     if(location.hostname=='localhost') return
-    let url = 'https://ssa.jd.com/sso/login?ReturnUrl='
+    let url = '/login?ReturnUrl='
     if(callbackUrl){
         url += encodeURIComponent(callbackUrl)
     }else{
