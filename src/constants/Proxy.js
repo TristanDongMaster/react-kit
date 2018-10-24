@@ -7,9 +7,9 @@ const DEBUG = NODE_ENV === 'development';
 const PROXY_ENV = DEBUG ? PROXY : 'PROD';
 const PROXY_MAC_ENV = DEBUG ? PROXYMAC : 'PROD';
 const SERVER_DOMAIN = {
-  SECKILL: DEBUG ? '' : 'http://newseckill.jd.com',
-  WORKFLOW: DEBUG ? '' : 'http://plat-gw.jd.com/',
-  MAC: DEBUG ? '' : 'http://mac.jd.com'
+  SECKILL: DEBUG ? '' : 'http://newseckill.',
+  WORKFLOW: DEBUG ? '' : 'http://plat-gw./',
+  MAC: DEBUG ? '' : 'http://mac.'
 };
 
 const PROXY_API = {

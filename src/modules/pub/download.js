@@ -26,7 +26,7 @@ export function downLoadFile( url,param={}, method='post') {
 }
 // url下载文件
 export function downloadFileUrl(param) {
-    const url = 'http://newseckill.jd.com/resource/download/template'
+    const url = 'http://newseckill./resource/download/template'
     const publicParameter = getPublicParameter()
     const data = merge({}, param, publicParameter)
     location.href = url + qs.stringify(data, { addQueryPrefix: true });

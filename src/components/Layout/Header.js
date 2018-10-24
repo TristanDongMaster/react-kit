@@ -71,7 +71,7 @@ export default class Header extends Component {
     }
     return (
       <div className="layout-header">
-      <a href="http://mc.jd.com/dist/pages/">
+      <a href="/dist/pages/">
         <div className="header-logo">
           <img src={AppConst.IMGSRC.LOGO} />
         </div>
