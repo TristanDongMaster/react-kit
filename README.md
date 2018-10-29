@@ -3,7 +3,7 @@
    
 ## 介绍
 
-    技术栈：Webpack v4 + React v16.3.2 + React-Route v3 + Antd v3 + Redux + ESLint
+    技术栈：Webpack v4 + React v16 + React-Route v3 + Antd v3 + Redux + ESLint
 
     功能模块：
 
