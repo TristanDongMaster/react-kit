@@ -124,7 +124,7 @@
 
     由于是单页面，需要拦截所有请求到一个入口页面，其他静态资源和api请求需要反向代理，参见如下demo：
 
-    说明：由于服务器静态资源目录不同，需要nignx代理转发秒杀静态资源请求，配置如下，_server_path需要更新为服务器真实目录
+    说明：由于服务器静态资源目录不同，需要nignx代理转发静态资源请求，配置如下，_server_path需要更新为服务器真实目录
     ##页面 - 路由代理
     location ~ /brandActivity/   {
         alias _server_path/index.html;
